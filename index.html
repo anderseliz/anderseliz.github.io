@@ -3,6 +3,7 @@
 <head>
 	<title>Mi curriculum</title>
 	<meta charset="utf-8">
+	<meta og:title=""
 </head>
 <body>
 	<div align="center">
@@ -189,14 +190,60 @@
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230186.95355476247!2d-100.44318340168796!3d25.649037643710493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86629531b437f8f5%3A0xa3d3d3ca6ac89894!2sMonterrey%2C+Nuevo+Leon!5e0!3m2!1sen!2smx!4v1463077836183" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
 	</section>
 	-->
-	<section class = "TED">
-		<h2>Cosas que me inspiran</h2>
-		<fieldset>
-		<iframe src="https://embed-ssl.ted.com/talks/lang/en/simon_sinek_how_great_leaders_inspire_action.html" width="100%" height="500" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-		<h2>Simon Sinek en cómo los grandes líderes inspiran acción</h2>
-		<p>La comunicación es una parte vital de nuestra vida diaria. Es indispensable el poder asegurarnos de que nuestras ideas lleguen a su destino y sean entendias. Aprender a enfocarnos en el "¿Por qué?" en vez de el "¿Qué?" tiene grandes ventajas que se reflejan a lo largo de nuestra vida dandole un sentido a lo que hacemos.</p>
+	<section>
+		<h1 style="display:inline">Cosas que me inspiran</h1>
+		<p style="display:inline">Click para expandir</p>
+		<fieldset onclick="muestraFieldset(1)" style="margin-top:10px" class="TED">
+			<iframe src="https://embed-ssl.ted.com/talks/lang/en/simon_sinek_how_great_leaders_inspire_action.html" width="100%" height="300" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="Ted" style="display:none"></iframe>
+			<h2>Simon Sinek: Cómo los grandes líderes inspiran acción</h2>
+			<p class="Ted" style="display:none">La comunicación es una parte vital de nuestra vida diaria. Es indispensable el poder asegurarnos de que nuestras ideas lleguen a su destino y sean entendias. Aprender a enfocarnos en el "¿Por qué?" en vez de el "¿Qué?" tiene grandes ventajas que se reflejan a lo largo de nuestra vida dandole un sentido a lo que hacemos.</p>
+		</fieldset>
+		<fieldset onclick="muestraFieldset(2)" style="margin-top:10px" class="TED">
+			<iframe src="https://embed-ssl.ted.com/talks/astro_teller_the_unexpected_benefit_of_celebrating_failure.html" width="100%" height="300" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="Ted" style="display:none"></iframe>
+			<h2>Astro Teller: El beneficio de celebrar el fracaso</h2>
+			<p class="Ted" style="display:none">El fracaso es algo que a personas detestan y tratan de evitar a costa de lo que sea. La mentalidad de este hombre nos muestra como el fracaso no es algo malo, al contrario... es algo que merece ser festejado! De nuestros errores aprendemos, y entre mas errores cometamos, más sabios nos haremos. Como dirían en el ámbito de la innovación... "Fail fast, fail cheap, and fail often."</p>
+		</fieldset>
+		<fieldset onclick="muestraFieldset(3)" style="margin-top:10px" class="TED">
+			<iframe src="https://embed-ssl.ted.com/talks/tim_ferriss_smash_fear_learn_anything.html" width="100%" height="300" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="Ted" style="display:none"></iframe>
+			<h2>Tim Ferris: Aprende lo que sea, sin miedo.</h2>
+			<p class="Ted" style="display:none">Tim Ferris nos habla sobre como el miedo debe de ser un impulsor para nosotros. En vez de que no hagamos algo por miedo, luchar contra ese miedo con la finalidad de superarnos a nosotros mismos."</p>
 		</fieldset>
 	</section>
+	<script type="text/javascript">
+		function muestraFieldset(numero){
+			var elems = document.getElementsByClassName("TED");
+			var cantidad = 0;
+			// var ted1 = document.getElementsByClassName("Ted1");
+			// var ted2 = document.getElementsByClassName("Ted2");
+			for (var i = 0; i < elems.length; i++){
+				cantidad = i;
+				var item = elems[i].getElementsByClassName("Ted");
+				if (i !== numero-1){
+					item[0].style.display = "none";
+					item[1].style.display = "none";
+				}
+			}
+			for (var i = 0; i < 2; i++){
+				var item = elems[numero-1].getElementsByClassName("Ted")[i];
+				if (item.style.display === "none"){
+					item.style.display = "block";
+				}else{
+					item.style.display = "none";
+				}
+			}
+			// if (ted1[0].style.display === "none"){
+			// 	ted1[0].style.display = "block";
+			// 	ted1[1].style.display = "block";
+			// 	ted2[0].style.display = "none";
+			// 	ted2[1].style.display = "none";
+			// }else{
+			// 	ted1[0].style.display = "none";
+			// 	ted1[1].style.display = "none";
+			// 	ted2[0].style.display = "block";
+			// 	ted2[1].style.display = "block";
+			// }
+		}
+	</script>
 	<br>
 	<br>
 	<br>
