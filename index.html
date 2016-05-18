@@ -191,57 +191,52 @@
 	</section>
 	-->
 	<section>
-		<h1 style="display:inline">Cosas que me inspiran</h1>
-		<p style="display:inline">Click para expandir</p>
-		<fieldset onclick="muestraFieldset(1)" style="margin-top:10px" class="TED">
+		<h1 style="display:inline">Mi mentalidad en tres videos</h1>
+		<p style="display:inline">*Click para expandir</p>
+		<fieldset onclick="muestraFieldset(1)" style="margin-top:10px; background-color:#DEDEDE" class="TED">
 			<iframe src="https://embed-ssl.ted.com/talks/lang/en/simon_sinek_how_great_leaders_inspire_action.html" width="100%" height="300" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="Ted" style="display:none"></iframe>
 			<h2>Simon Sinek: Cómo los grandes líderes inspiran acción</h2>
 			<p class="Ted" style="display:none">La comunicación es una parte vital de nuestra vida diaria. Es indispensable el poder asegurarnos de que nuestras ideas lleguen a su destino y sean entendias. Aprender a enfocarnos en el "¿Por qué?" en vez de el "¿Qué?" tiene grandes ventajas que se reflejan a lo largo de nuestra vida dandole un sentido a lo que hacemos.</p>
 		</fieldset>
-		<fieldset onclick="muestraFieldset(2)" style="margin-top:10px" class="TED">
+		<fieldset onclick="muestraFieldset(2)" style="margin-top:10px; background-color:#DEDEDE" class="TED">
 			<iframe src="https://embed-ssl.ted.com/talks/astro_teller_the_unexpected_benefit_of_celebrating_failure.html" width="100%" height="300" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="Ted" style="display:none"></iframe>
 			<h2>Astro Teller: El beneficio de celebrar el fracaso</h2>
-			<p class="Ted" style="display:none">El fracaso es algo que a personas detestan y tratan de evitar a costa de lo que sea. La mentalidad de este hombre nos muestra como el fracaso no es algo malo, al contrario... es algo que merece ser festejado! De nuestros errores aprendemos, y entre mas errores cometamos, más sabios nos haremos. Como dirían en el ámbito de la innovación... "Fail fast, fail cheap, and fail often."</p>
+			<p class="Ted" style="display:none">El fracaso es algo que a personas detestan y tratan de evitar a toda costa. La mentalidad de este hombre nos muestra como el fracaso no es algo malo, al contrario... es algo que merece ser celebrado! De nuestros errores aprendemos, y entre mas errores cometamos, más sabios nos haremos. Como dirían en el ámbito de la innovación... "Fail fast, fail cheap, and fail often."</p>
 		</fieldset>
-		<fieldset onclick="muestraFieldset(3)" style="margin-top:10px" class="TED">
-			<iframe src="https://embed-ssl.ted.com/talks/tim_ferriss_smash_fear_learn_anything.html" width="100%" height="300" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="Ted" style="display:none"></iframe>
-			<h2>Tim Ferris: Aprende lo que sea, sin miedo.</h2>
-			<p class="Ted" style="display:none">Tim Ferris nos habla sobre como el miedo debe de ser un impulsor para nosotros. En vez de que no hagamos algo por miedo, luchar contra ese miedo con la finalidad de superarnos a nosotros mismos."</p>
-		</fieldset>
+		<fieldset onclick="muestraFieldset(3)" style="margin-top:10px; background-color:#DEDEDE" class="TED">
+			<iframe src="https://embed-ssl.ted.com/talks/john_green_the_nerd_s_guide_to_learning_everything_online.html" width="100%" height="300" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="Ted" style="display:none"></iframe>
+			<h2>John Green: La guia de "nerds" para aprender todo en línea.</h2>
+			<p class="Ted" style="display:none">Hoy en día tenemos el internet nos ha abierto las puertas a un mundo de posibilidades. Un mundo en el que basta querer aprender para poder hacerlo. Definitivamente esta es un "arma" muy poderosa que nos ayuda a vivir una vida sin límites externos, solamente aquellos límites internos que nos ponemos a nosotros mismos.</p>
+		</fieldset>	
+		<p>Sin duda alguna, la idea principal que rige mi vida es el ayudar a la gente. Ayudar a las personas de forma que no tengan limitantes, darles todas las herramientas que necesiten para lograr sus sueños y metas. Que el único límite con el que se puedan topar sea ellos mismos.</p>
+		<p>El poder llegar con una persona que quiere hacer algo pero no lo logra y preguntarle... ¿Qué es lo que te falta para poder seguir adelante? Y tan pronto conteste, solucionar ese problema y volver a preguntarle. Seguir haciendo esto hasta llegar al punto en el que la persona no sea capas de responder. Es entonces cuando en verdad se dará cuenta que ningun límite es tan grande como aquel que uno se pone a sí mismo.</p>
+		<div align="center">
+		<h1 align="center" style="display:inline">"</h1>
+		<h3 align="center" style="display:inline">El que quiere, puede.</h3>
+		<h1 align="center" style="display:inline">"</h1>
+		</div>
 	</section>
 	<script type="text/javascript">
 		function muestraFieldset(numero){
 			var elems = document.getElementsByClassName("TED");
-			var cantidad = 0;
-			// var ted1 = document.getElementsByClassName("Ted1");
-			// var ted2 = document.getElementsByClassName("Ted2");
 			for (var i = 0; i < elems.length; i++){
-				cantidad = i;
 				var item = elems[i].getElementsByClassName("Ted");
 				if (i !== numero-1){
 					item[0].style.display = "none";
 					item[1].style.display = "none";
+					elems[i].style.backgroundColor = "#DEDEDE";
 				}
 			}
 			for (var i = 0; i < 2; i++){
 				var item = elems[numero-1].getElementsByClassName("Ted")[i];
 				if (item.style.display === "none"){
 					item.style.display = "block";
+					elems[numero-1].style.backgroundColor = "#FAFAFA";
 				}else{
 					item.style.display = "none";
+					elems[numero-1].style.backgroundColor = "#DEDEDE";
 				}
 			}
-			// if (ted1[0].style.display === "none"){
-			// 	ted1[0].style.display = "block";
-			// 	ted1[1].style.display = "block";
-			// 	ted2[0].style.display = "none";
-			// 	ted2[1].style.display = "none";
-			// }else{
-			// 	ted1[0].style.display = "none";
-			// 	ted1[1].style.display = "none";
-			// 	ted2[0].style.display = "block";
-			// 	ted2[1].style.display = "block";
-			// }
 		}
 	</script>
 	<br>
