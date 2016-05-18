@@ -8,27 +8,42 @@
 	<meta og:description="Una página donde pueden encontrar información sobre mí."
 </head>
 <body>
-	<div align="center">
-		<img src="foto1.png" widht="100" height="200" alt="Mi foto">
-		<h2>Andrés Elizondo</h2>
-	</div>
-	
-	<section class="mi_historia">
-		<h3>Mi Historia</h3>
-		<p>Mi nombre es Andrés Elizondo, nací en Monterrey, Nuevo León en 1995. Actualmente estoy llevando a cabo mis estudios profesionales en el <a href="http://www.itesm.mx/wps/portal?WCM_GLOBAL_CONTEXT=">Tecnológico de Monterrey</a> y me encuentro cursando mi 4 semestre en la carrera de <a href="http://www.itesm.mx/wps/wcm/connect/itesm/tecnologico+de+monterrey/carreras+profesionales/areas+de+estudio/ingenieria+y+ciencias/iid">Ingeniería en Innovación y Desarrollo</a> (I<sup>2</sup>D).</p>
-		<br/>
-		<div>
-			<h3>Descripción</h3>
-			<ul>
-				<li>Interés por las computadoras desde niño.</li>
-				<li>Favoresco claramente el pensamiento lógico y racional.</li>
-				<li>Gusto por la robótica y la programación.</li>
-				<li>Hambriento de conocimiento.</li>
-				<li>Autodidacta.</li>
-			</ul>
+	<section class="header">
+		<h3 class="opcion"><a href="#Inicio">Inicio</a></h3>
+		<h3 class="opcion"><a href="#Historia">Historia</a></h3>
+		<h3 class="opcion"><a href="#Experiencia">Experiencia</a></h3>
+		<h3 class="opcion"><a href="#Motivacion">Motivación</a></h3>
+		<h3 class="opcion"><a href="#Contacto">Contacto</a></h3>
+	</section>
+	<section id="Inicio" class="imagenes">
+		<img id="imagen_actual" src="Fotos/Foto1.JPG">
+	</section>
+	<br>
+	<br>
+	<br>
+	<section id="Historia">
+		<div align="center">
+			<img src="foto1.png" widht="100" height="200" alt="Mi foto">
+			<h2>Andrés Elizondo</h2>
+		</div>
+		
+		<div id="mi_historia">
+			<h3>Mi Historia</h3>
+			<p>Mi nombre es Andrés Elizondo, nací en Monterrey, Nuevo León en 1995. Actualmente estoy llevando a cabo mis estudios profesionales en el <a href="http://www.itesm.mx/wps/portal?WCM_GLOBAL_CONTEXT=">Tecnológico de Monterrey</a> y me encuentro cursando mi 4 semestre en la carrera de <a href="http://www.itesm.mx/wps/wcm/connect/itesm/tecnologico+de+monterrey/carreras+profesionales/areas+de+estudio/ingenieria+y+ciencias/iid">Ingeniería en Innovación y Desarrollo</a> (I<sup>2</sup>D).</p>
 		</div>
 	</section>
-	<section>
+	<br/>
+	<div>
+		<h3>Descripción</h3>
+		<ul>
+			<li>Interés por las computadoras desde niño.</li>
+			<li>Favoresco claramente el pensamiento lógico y racional.</li>
+			<li>Gusto por la robótica y la programación.</li>
+			<li>Hambriento de conocimiento.</li>
+			<li>Autodidacta.</li>
+		</ul>
+	</div>
+	<section id="Experiencia">
 		<table border="1" width = "50%" align = "center" bgcolor="#EEEEEE">
 			<!-- Título -->
 			<tr>
@@ -64,10 +79,11 @@
 						<li>
 							<p>Desensamblado de computadoras.</p>
 						</li>
-						<li>
+						<li class="opcional">
 							<p>Modificación de código para 'hackear' juegos.</p>
 						</li>
 					</ul>
+					<p onclick="muestraMas(this)">Ver más...</p>
 				</td>
 			</tr>
 			<!-- HTML -->
@@ -86,10 +102,11 @@
 						<li>
 							<p>Desarrollo de básicos de páginas web en SeaMonkey</p>
 						</li>
-						<li>
+						<li class="opcional">
 							<p>Desarrollo de páginas como freelancer.</p>
 						</li>
 					</ul>
+					<p onclick="muestraMas(this)">Ver más...</p>
 				</td>
 			</tr>
 			<!-- Visual Basic -->
@@ -108,13 +125,14 @@
 						<li>
 							<p>Desarrollo de programas básicos en Visual Basic</p>
 						</li>
-						<li>
+						<li class="opcional">
 							<p>Desarrollo de sistema de administración para la escuela de música de un familiar</p>
 						</li>
-						<li>
+						<li class="opcional">
 							<p>Desarrollo de sistemas de administración de una empresa para RH e inventario. </p>
 						</li>
 					</ul>
+					<p onclick="muestraMas(this)">Ver más...</p>
 				</td>
 			</tr>
 			<!-- Game Maker -->
@@ -133,10 +151,11 @@
 						<li>
 							<p>Desarrollo básico de video juegos.</p>
 						</li>
-						<li>
+						<li class="opcional">
 							<p>Desarrollo de un 'remake' de Super Smash Bros</p>	
 						</li>
 					</ul>
+					<p onclick="muestraMas(this)">Ver más...</p>
 				</td>
 			</tr>
 			<!-- Javascript -->
@@ -155,10 +174,11 @@
 						<li>
 							<p>Aprendizaje autodiacta.</p>
 						</li>
-						<li>
+						<li class="opcional">
 							<p>Programación de páginas web para aprender.</p>
 						</li>
 					</ul>
+					<p onclick="muestraMas(this)">Ver más...</p>
 				</td>
 			</tr>
 			<!--  -->
@@ -177,10 +197,11 @@
 						<li>
 							<p>Cursos de Carrera.</p>
 						</li>
-						<li>
+						<li class="opcional">
 							<p>Fundamentos, Objetos y Estructura de Datos.</p>
 						</li>
 					</ul>
+					<p onclick="muestraMas(this)">Ver más...</p>
 				</td>
 			</tr>
 		</table>
@@ -192,63 +213,39 @@
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230186.95355476247!2d-100.44318340168796!3d25.649037643710493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86629531b437f8f5%3A0xa3d3d3ca6ac89894!2sMonterrey%2C+Nuevo+Leon!5e0!3m2!1sen!2smx!4v1463077836183" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
 	</section>
 	-->
-	<section>
+	<section id="Motivacion">
 		<h1 style="display:inline">Mi mentalidad en tres videos</h1>
 		<p style="display:inline">*Click para expandir</p>
 		<fieldset onclick="muestraFieldset(1)" style="margin-top:10px; background-color:#DEDEDE" class="TED">
 			<iframe src="https://embed-ssl.ted.com/talks/lang/en/simon_sinek_how_great_leaders_inspire_action.html" width="100%" height="300" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="Ted" style="display:none"></iframe>
-			<h2>Simon Sinek: Cómo los grandes líderes inspiran acción</h2>
+			<h2 class="titulo">Simon Sinek: Cómo los grandes líderes inspiran acción</h2>
 			<p class="Ted" style="display:none">La comunicación es una parte vital de nuestra vida diaria. Es indispensable el poder asegurarnos de que nuestras ideas lleguen a su destino y sean entendias. Aprender a enfocarnos en el "¿Por qué?" en vez de el "¿Qué?" tiene grandes ventajas que se reflejan a lo largo de nuestra vida dandole un sentido a lo que hacemos.</p>
 		</fieldset>
 		<fieldset onclick="muestraFieldset(2)" style="margin-top:10px; background-color:#DEDEDE" class="TED">
 			<iframe src="https://embed-ssl.ted.com/talks/astro_teller_the_unexpected_benefit_of_celebrating_failure.html" width="100%" height="300" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="Ted" style="display:none"></iframe>
-			<h2>Astro Teller: El beneficio de celebrar el fracaso</h2>
+			<h2 class="titulo">Astro Teller: El beneficio de celebrar el fracaso</h2>
 			<p class="Ted" style="display:none">El fracaso es algo que a personas detestan y tratan de evitar a toda costa. La mentalidad de este hombre nos muestra como el fracaso no es algo malo, al contrario... es algo que merece ser celebrado! De nuestros errores aprendemos, y entre mas errores cometamos, más sabios nos haremos. Como dirían en el ámbito de la innovación... "Fail fast, fail cheap, and fail often."</p>
 		</fieldset>
 		<fieldset onclick="muestraFieldset(3)" style="margin-top:10px; background-color:#DEDEDE" class="TED">
 			<iframe src="https://embed-ssl.ted.com/talks/john_green_the_nerd_s_guide_to_learning_everything_online.html" width="100%" height="300" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="Ted" style="display:none"></iframe>
-			<h2>John Green: La guia de "nerds" para aprender todo en línea.</h2>
+			<h2 class="titulo">John Green: La guia de "nerds" para aprender todo en línea.</h2>
 			<p class="Ted" style="display:none">Hoy en día tenemos el internet nos ha abierto las puertas a un mundo de posibilidades. Un mundo en el que basta querer aprender para poder hacerlo. Definitivamente esta es un "arma" muy poderosa que nos ayuda a vivir una vida sin límites externos, solamente aquellos límites internos que nos ponemos a nosotros mismos.</p>
 		</fieldset>	
 		<p>Sin duda alguna, la idea principal que rige mi vida es el ayudar a la gente. Ayudar a las personas de forma que no tengan limitantes, darles todas las herramientas que necesiten para lograr sus sueños y metas. Que el único límite con el que se puedan topar sea ellos mismos.</p>
 		<p>El poder llegar con una persona que quiere hacer algo pero no lo logra y preguntarle... ¿Qué es lo que te falta para poder seguir adelante? Y tan pronto conteste, solucionar ese problema y volver a preguntarle. Seguir haciendo esto hasta llegar al punto en el que la persona no sea capas de responder. Es entonces cuando en verdad se dará cuenta que ningun límite es tan grande como aquel que uno se pone a sí mismo.</p>
 		<div align="center">
-		<h1 align="center" style="display:inline">"</h1>
-		<h3 align="center" style="display:inline">El que quiere, puede.</h3>
-		<h1 align="center" style="display:inline">"</h1>
+			<h2>
+				<span>"</span>
+				El que quiere, puede.
+				<span>"</span>
+			</h2>
 		</div>
 	</section>
-	<script type="text/javascript">
-		function muestraFieldset(numero){
-			var elems = document.getElementsByClassName("TED");
-			for (var i = 0; i < elems.length; i++){
-				var item = elems[i].getElementsByClassName("Ted");
-				if (i !== numero-1){
-					item[0].style.display = "none";
-					item[1].style.display = "none";
-					elems[i].style.backgroundColor = "#DEDEDE";
-					elems[i].style.border = "solid black 1px";
-				}
-			}
-			for (var i = 0; i < 2; i++){
-				var item = elems[numero-1].getElementsByClassName("Ted")[i];
-				if (item.style.display === "none"){
-					item.style.display = "block";
-					elems[numero-1].style.backgroundColor = "#FAFAFA";
-					elems[numero-1].style.border = "solid black 2px";
-				}else{
-					item.style.display = "none";
-					elems[numero-1].style.backgroundColor = "#DEDEDE";
-					elems[numero-1].style.border = "solid black 1px";
-				}
-			}
-		}
-	</script>
 	<br>
 	<br>
 	<br>
 	<form>
-		<fieldset>
+		<fieldset id="Contacto">
 			<legend>¿Quieres contactarme?</legend>
 			<input type="text" name="nombre" value="" placeholder="Nombre">
 			<input type="text" name="apellido" value="" placeholder="Apellido">
@@ -261,16 +258,111 @@
 
 		</fieldset>
 	</form>
+<style type="text/css">
+		fieldset .titulo {
+			font-size:16pt;
+		}
+		span{
+			font-size:30pt;
+			font-family: cursive;
+		}
+		.header{
+			background-color:rgba(255,255,255,0.95);
+			margin:-10px;
+			padding:20px;
+			text-align:right;
+			position: -webkit-sticky;
+			/*position: -moz-sticky;*/
+			position: -ms-sticky;
+			position: -o-sticky;
+			top:0px;
+		}
+		.header .opcion{
+			display:inline;
+			margin:25px;
+			margin-right:10px;
+		}
+		.header a{
+			color:black;
+			text-decoration: none;
+		}
+		.imagenes{
+			text-align: center;
+			width:100%;
+			background-color:#333333;
+			margin:-10px;
+			margin-top:-100px;
+			padding-top:100px;
+		}
+		#imagen_actual{
+			height:500px;
+			margin:50px;
+		}
+		#mi_historia{
+			width:60%;
+		}
+		.TED{
+			border-radius: 10px;
+		}
+	</style>
+	<script type="text/javascript">
+		function muestraFieldset(numero){
+			var elems = document.getElementsByClassName("TED");
+			for (var i = 0; i < elems.length; i++){
+				var item = elems[i].getElementsByClassName("Ted");
+				if (i !== numero-1){
+					item[0].style.display = "none";
+					item[1].style.display = "none";
+					elems[i].style.backgroundColor = "#DEDEDE";
+					elems[i].style.border = "solid black 1px";
+					if (elems[numero-1].getElementsByClassName("titulo")[0].style.fontSize > "16pt"){
+						elems[i].getElementsByClassName("titulo")[0].style.fontSize = "16pt";
+					}else{
+						elems[i].getElementsByClassName("titulo")[0].style.fontSize = "13pt";
+					}
+				}
+			}
+			for (var i = 0; i < 2; i++){
+				var item = elems[numero-1].getElementsByClassName("Ted")[i];
+				if (item.style.display === "none"){
+					item.style.display = "block";
+					elems[numero-1].style.backgroundColor = "#FAFAFA";
+					elems[numero-1].style.border = "solid black 2px";
+					elems[numero-1].getElementsByClassName("titulo")[0].style.fontSize = "21pt";
+				}else{
+					item.style.display = "none";
+					elems[numero-1].style.backgroundColor = "#DEDEDE";
+					elems[numero-1].style.border = "solid black 1px";
+					elems[numero-1].getElementsByClassName("titulo")[0].style.fontSize = "16pt";
+				}
+			}
+		}
 
-	<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		//esconde iniciales
+		var datos = document.getElementsByClassName("opcional");
+		for (var i = 0; i < datos.length; i++){
+			datos[i].style.display = "none";
+		}
+		function muestraMas(item){
+			var elems = item.parentNode.getElementsByTagName("ul")[0].getElementsByTagName("li");
+			for (var num = 1; num < elems.length; num++){
+				if (elems[num].style.display === ""){
+					elems[num].style.display = 'none';
+					item.innerText = "Ver más...";
+				}else{
+					elems[num].style.display = "";
+					item.innerText = "Ver menos...";
+				}
+			}
+		}
+
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-77933110-1', 'auto');
   ga('send', 'pageview');
-
-</script>
+	</script>
 </body>
 </html>
